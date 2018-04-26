@@ -1,2 +1,5 @@
-# AQCV
-A static code validator
+Automated Quality compliance Verification for ESQL/C Programs
+
+A Coding Standard Compliance checker is needed to overcome critical software development challenges and reduce development costs. The software engineering field has developed practices such as requirements engineering, analysis and design technologies, process engineering, and the like. Many of these practices apply to the implementation phase of development; for example, coding standards, refactoring, inspection, and static analysis. Among them, coding standards are the fundamental way to improve code readability, help individual developers produce consistent code, and prevent error-prone coding styles. 
+ESQL/C is one of the rare programming languages which are not supported by the code analysis tools available in the Open source world. Main aim of this project is to provide a system to check the standard compliance of ESQL/C programs. This Project will be very helpful in development environments where a GUI Base IDE cannot be deployed (such as UNIX based Remote developments).  
+There are two aspects in the implementation of the project. First is Integration with SVN which will enforce the standards compliance of the code being checked-in. Second one is the Standalone Implementation which will enable the developer to check their code before SCM check-in. 
