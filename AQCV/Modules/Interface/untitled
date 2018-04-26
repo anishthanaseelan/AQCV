@@ -1,0 +1,13 @@
+package Common::Interface;
+###############################################################################
+#
+#   File Name:       Interface.pm
+#   Author:          Anish Thanaseelan.K
+#   Date:            10-Nov-2010
+#   Purpose:         Interface between SVN and Common Interface
+#   Usage:           Common::Interface( <Dir1> , <HashReferance> );
+#
+###############################################################################
+use SVN::Agent;
+
+

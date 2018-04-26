@@ -1,0 +1,22 @@
+<AQCV>
+    <General>
+        <LocalTempDir>/tmp/AQCV</LocalTempDir>
+        <RepoTempDir>/tmp/AQCV</RepoTempDir>
+        <ReportPath>/home/Temp/AQCV</ReportPath>
+    </General>
+    <Mail SendMail ="No">
+        <ReportMailID>ansihthanaseelan@gmail.com</ReportMailID>
+        <SMTPServer>localhost</SMTPServer>
+        <Port>80</Port>
+    </Mail>
+    <Rules>
+        <CMXTY Active="Yes">
+            <Name>"Complexcity"</Name>
+            <Type>FUNCTION</Type>
+            <Mode>ACTIVE</Mode>
+            <Module>Rules::Complexcity</Module>
+            <Cutoff>9</Cutoff>
+            <Exceptions>ON</Exceptions>
+        </CMXTY>
+    </Rules>
+</AQCV>
