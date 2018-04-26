@@ -1,0 +1,20 @@
+<?xml version='1.0' standalone='yes'?>
+<AQCV>
+  <General LocalTempDir=""
+           RepoTempDir=""
+           ReportPath="" />
+  <Rules name="aaa"
+         Active="YES"
+         Cutoff=""
+         Mode="ACTIVE"
+         Module="aaa"
+         Name="aaa"
+         Type="FUNCTION" />
+  <Rules name="bbb"
+         Active="YES"
+         Cutoff=""
+         Mode="ACTIVE"
+         Module="aaa"
+         Name="aaa"
+         Type="FUNCTION" />
+</AQCV>

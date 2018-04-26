@@ -1,0 +1,55 @@
+#!/usr/local/bin/perl -w
+BEGIN 
+{
+	push ( @INC , '/root/Projects/AQCV/Modules' );
+}
+
+#
+# pre-commit hook for Subversion
+# deny commit of .ec and .c programs if its not comply with quality rules.
+#
+# under Windows, the contents of 'pre-commit.bat' should be:
+# ...(repo path)...\hooks\pre-commit.pl %1 %2
+#
+use strict;
+use Certificate;
+
+my $repos = $ARGV[0];
+my $txn = $ARGV[1];
+
+my $svnlook = '/usr/bin/svnlook';
+my $Error_code = 0;
+
+my $msg = `$svnlook log -t "$txn" "$repos"`;
+chomp($msg);
+
+if ( ! &Certificate::VerifyCertificate($msg) )
+{
+    &WriteLog ( "$msg,Verification Failed");
+    print STDERR "Certificate verification : False Certificate or Certificate not found .... \n";
+    $Error_code = 1;
+}
+&WriteLog ("$msg,Verified");
+exit ($Error_code);
+ 
+
+sub WriteLog
+{ 
+    
+    my $msg = shift;
+    my $LogFile = '/root/Projects/AQCV/Reports/pre-Commit.log';
+	my $lTime = '';
+	my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
+	
+	$lTime = sprintf (  "%4d-%02d-%02d %02d:%02d:%02d", 
+				$year+1900,$mon+1,$mday,$hour,$min,$sec );
+    
+    if ( open ( FILE , ">>$LogFile" ) )
+    {
+        print FILE "$lTime,$msg \n";
+        close ( FILE );
+    }
+    return 0;
+}
+  
+__END__

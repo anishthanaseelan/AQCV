@@ -1,0 +1,12 @@
+<?xml version='1.0' standalone='yes'?>
+<AQCV>
+  <General LocalTempDir=""
+           RepoTempDir=""
+           ReportPath="" />
+  <Rules name="dsada"
+         Active="YES"
+         Mode="ACTIVE"
+         Module=""
+         Name="NoNasscs"
+         Type="FILE" />
+</AQCV>

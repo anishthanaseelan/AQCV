@@ -1,0 +1,47 @@
+<AQCV>
+  <Admins>
+    <Userid>anish</Userid>
+    <Userid>crontab</Userid>
+    <Userid>asas</Userid>
+  </Admins>
+  <General LocalTempDir="/tmp/AQCV"
+           RepoTempDir="/tmp/AQCV"
+           ReportPath="/home/Temp/AQCV" />
+  <Mail AdminMailID="anishthanaseelan@gmail.com"
+        Port="80"
+        ReportMailID="anishthanaseelan@gmail.com"
+        SMTPServer="localhostsxsx"
+        SendMail="NO" />
+  <Rules name="CMTDEN"
+         Active="YES"
+         Cutoff="30"
+         Mode="PASSIVE"
+         Module="Rule::CmtDensity"
+         Name="&quot;Comment Density&quot;"
+         Type="FILE" />
+  <Rules name="CMXTY"
+         Active="YES"
+         Cutoff="9"
+         Mode="ACTIVE"
+         Module="Rule::Complexcity"
+         Name="&quot;Complexcity&quot;"
+         Type="FUNCTION" />
+  <Rules name="SQLLGCHK"
+         Active="NO"
+         Mode="ACTIVE"
+         Module="Rule::SQLLogChk"
+         Name="&quot;SQL Logging Check&quot;"
+         Type="FUNCTION" />
+  <Rules name="UCLSCUR"
+         Active="NO"
+         Mode="ACTIVE"
+         Module="Rule::UnClsCursor"
+         Name="&quot;Unclosed Cursor&quot;"
+         Type="PROGRAM" />
+  <Rules name="UNUSDVAR"
+         Active="NO"
+         Mode="ACTIVE"
+         Module="Rule::UnusedVar"
+         Name="&quot;Unused Variables&quot;"
+         Type="FUNCTION" />
+</AQCV>

@@ -1,0 +1,51 @@
+<AQCV>
+    <General>
+        <LocalTempDir>/tmp/AQCV</LocalTempDir>
+        <RepoTempDir>/tmp/AQCV</RepoTempDir>
+        <ReportPath>/home/Temp/AQCV</ReportPath>
+    </General>
+    <Mail SendMail ="NO">
+        <ReportMailID>anishthanaseelan@gmail.com</ReportMailID>
+        <AdminMailID>anishthanaseelan@gmail.com</AdminMailID>
+        <SMTPServer>localhost</SMTPServer>
+        <Port>80</Port>
+    </Mail>
+    <Admins>
+        <Userid>anish</Userid>
+        <Userid>crontab</Userid>
+    </Admins>
+    <Rules>
+        <CMXTY Active="YES">
+            <Name>"Complexcity"</Name>
+            <Type>FUNCTION</Type>
+            <Mode>ACTIVE</Mode>
+            <Module>Rule::Complexcity</Module>
+            <Cutoff>9</Cutoff>
+        </CMXTY>
+        <CMTDEN Active="YES">
+            <Name>"Comment Density"</Name>
+            <Type>FILE</Type>
+            <Mode>PASSIVE</Mode>
+            <Module>Rule::CmtDensity</Module>
+            <Cutoff>30</Cutoff>
+        </CMTDEN>
+        <UCLSCUR Active="NO">
+            <Name>"Unclosed Cursor"</Name>
+            <Type>PROGRAM</Type>
+            <Mode>ACTIVE</Mode>
+            <Module>Rule::UnClsCursor</Module>
+        </UCLSCUR>
+        <SQLLGCHK Active="NO">
+            <Name>"SQL Logging Check"</Name>
+            <Type>FUNCTION</Type>
+            <Mode>ACTIVE</Mode>
+            <Module>Rule::SQLLogChk</Module>
+        </SQLLGCHK>
+        <UNUSDVAR Active="NO">
+            <Name>"Unused Variables"</Name>
+            <Type>FUNCTION</Type>
+            <Mode>ACTIVE</Mode>
+            <Module>Rule::UnusedVar</Module>
+        </UNUSDVAR>                        
+    </Rules>
+</AQCV>
