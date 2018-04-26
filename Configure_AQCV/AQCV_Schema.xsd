@@ -1,0 +1,29 @@
+<schema>
+
+  <element name="AQCV" type="string"/>
+  <element name="comment" type="AQCV_Schema:General"/>
+
+  <complexType name="General">
+    <sequence>
+    <element name="LocalTempD" type="string"/>
+    <element name="RepoTempDir"  type="string"/>
+    <element name="ReportPathDir"  type="string"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="Mail">
+    <sequence>
+		<element name="AdminMailID" type="AQCV_Schema:emailID"/>
+        <element name="Port="80" type="positiveInteger"/>
+        <element name="ReportMailID" type="AQCV_Schema:emailID"/>
+        <element name="SMTPServer="localhost"
+        <element name="SendMail="NO"
+     <element name="name"   type="string"/>
+      <element name="street" type="string"/>
+      <!-- etc. -->
+    </sequence>
+  </complexType>
+
+  <!-- etc. -->
+
+</schema>
